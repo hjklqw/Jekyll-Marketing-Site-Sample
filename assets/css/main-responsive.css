@@ -1,0 +1,88 @@
+---
+---
+
+@media all and (max-width: 1725px) {
+	.carousel-arrow {
+		width: 10%;
+	}
+	.carousel-slides {
+		padding: 0 10%;
+	}
+}
+
+@media all and (max-width: 1300px) {
+	.customer .review {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: none;
+		border: none;
+		color: white;
+		width: 100%;
+	}
+	.customer .image {
+		float: none;
+		width: 100%;
+		-webkit-filter: blur(5px);
+		filter: blur(5px);
+		background: #573a20;
+		-webkit-transition: all ease-in-out 0.5s;
+		-moz-transition: all ease-in-out 0.5s;
+		-o-transition: all ease-in-out 0.5s;
+		transition: all ease-in-out 0.5s;
+	}
+	.customer img {
+		opacity: 0.5;
+		-webkit-transition: opacity ease-in-out 0.5s;
+		-moz-transition: opacity ease-in-out 0.5s;
+		-o-transition: opacity ease-in-out 0.5s;
+		transition: opacity ease-in-out 0.5s;
+	}
+	.customer .image:hover {
+		-webkit-filter: none;
+		filter: none;
+		background: none;
+	}
+	.customer .image:hover img {
+		opacity: 1;
+	}
+}
+
+@media all and (max-width: 1000px) {
+	section {
+		padding: 3% 10%;
+	}
+}
+
+@media all and (max-width: 670px) {
+	section.body.vertical > .content > h2 {
+		padding: 0;
+	}
+	.specialList > div:not(.background) {
+		padding: 0;
+	}
+}
+
+@media all and (max-width: 530px) {
+	section {
+		padding: 2% 3%;
+	}
+	.horizontal {
+		display: block;
+	}
+	.horizontal > div:not(.background) {
+		width: 100%;
+		display: block;
+	}
+}
+
+@media all and (max-width: 380px) {
+	.bulletList:not(.horizontal) li {
+		width: 100%;
+		display: block;
+	}
+	.bulletList .list {
+		padding-left: 10px;
+	}
+}

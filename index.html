@@ -1,0 +1,220 @@
+---
+layout: default
+title: Home
+b2Items:
+    - header: "Unbound size"
+      subtitle: "One size fits all; get all the space you need with no physical expansion"
+    - header: "Unmatched comfort"
+      subtitle: "With five generic designs, all looking like every other cardboard box, you'll feel right at home"
+    - header: "Universal appeal"
+      subtitle: "The perfect gift for people of all ages, genders, and ethnicities"
+b3Items:
+    - header: "Storage"
+    - header: "Craft"
+    - header: "Espionage"
+b5Items:
+    - header: "Reduce ecological footprint"
+      subtitle: "Not only organic and GMO-free, but also 100% biodegradable"
+    - header: "Increase sodium output"
+      subtitle: "Guaranteed minimum of three days post-order when your body will produce high amounts of sodium to ensure your health"
+b7Items:
+    - header: "Easy to type"
+      subtitle: "By removing the word 'board', we turn typos into a proud brand name"
+    - header: "Easy to say"
+      subtitle: "Along the same vein, we also turn lisps into slogans"
+    - header: "Easy to remember"
+      subtitle: "You'll never need to ask yourself what our product does"
+    - header: "Easy to view"
+      subtitle: "With our patented GenericLook&reg; technology, Cardbox&trade; is scientifically proven to reduce eye strain and cognitive functions"
+---
+
+<!-- Top -->
+
+{% capture topSection_title %}
+	Introducing the <b>{{ site.productName }}</b>
+{% endcapture %}
+
+{% capture topSection_subtitle %}
+	Made of 100% recycled material, certified organic and GMO-free.<br />
+	{{ site.slogan }}
+{% endcapture %}
+
+{% capture topSection_content %}
+	<div id="box">
+		<div class="center">
+			<div class="flap top"></div>
+			<div class="flap side left"></div>
+			<div class="flap side right"></div>
+			<div class="flap bottom"></div>
+		</div>
+	</div>
+{% endcapture %}
+
+{% include section.html
+	className="top"
+	header=topSection_title
+	subtitle=topSection_subtitle
+	bgImage="https://images.pexels.com/photos/580900/pexels-photo-580900.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+	bgPos="0 20%"
+	content=topSection_content %}
+
+<!-- B1 -->
+	
+{% capture b1_subtitle %}
+	The compact design and world-class technology of the {{ site.productName }} allows you to store everything from your favourite toy to your favourite city, all without weighing a single ton.
+{% endcapture %}
+	
+{% include section.html
+	className="body horizontal left"
+	header="Everything in one package"
+	subtitle=b1_subtitle
+	image="assets/images/b1.png" %}
+
+<!-- B2 -->
+
+{% capture b2_content %}
+	{% include specialList.html
+		image="assets/images/b2.png"
+		items=page.b2Items
+		direction="right" %}
+{% endcapture %}
+	
+{% include section.html
+	className="body vertical"
+	header="Perfect for every occasion"
+	subtitle="Whether it's storage, craft, or tactical espionage, we've got you covered."
+	content=b2_content %}
+	
+<hr />
+	
+<!-- B3 -->
+
+{% capture b3_subtitle %}
+	With {{ site.productName }}, everything is easier than ever before; from daily life to special events, {{ site.productName }} is here for you. Check out how your life can be transformed when the following activities become possible with a single wish. 
+{% endcapture %}
+
+{% capture b3_content %}
+	{% include specialList.html
+		title="Usage Examples:"
+		image="assets/images/b3.png"
+		items=page.b3Items
+		direction="left"
+		content='<a href="#fakeLink" class="more">More about usage</a>' %}
+{% endcapture %}
+	
+{% include section.html
+	className="body vertical"
+	header="Take matters into your own box"
+	subtitle=b3_subtitle
+	content=b3_content %}
+	
+<!-- B4 (Feature) -->
+	
+{% include section.html
+	className="body horizontal left feature"
+	header="There's more"
+	subtitle="If you buy 200 Cardboxes, you'll receive a special gift!<br />Offer available until the end of the month."
+	image="assets/images/feature.png"
+	imageStyle="width: 500px;"
+	bgImage="assets/images/featureBG.png"
+	bgPos="top"
+	content='<a href="#fakeLinkAgain" class="more">Learn more</a>' %}
+	
+<!-- B5 -->
+
+{% capture b5_subtitle %}
+	When looking for cardboard boxes, you shouldn't just look for cardboard boxes.<br />
+	That's where {{ site.productName }} comes in.
+{% endcapture %}
+
+{% capture b5_content %}
+	{% include bulletList.html
+		image="https://images.pexels.com/photos/678308/pexels-photo-678308.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+		items=page.b5Items %}
+{% endcapture %}
+
+{% include section.html
+	className="body vertical"
+	header="Health matters"
+	subtitle=b5_subtitle
+	content=b5_content %}
+	
+<!-- B6 (Highlight) -->
+
+{% include section.html
+	className="body horizontal highlight"
+	header="More than just a box"
+	subtitle="When purchasing a new product, you want to guarantee that it'll be the best one for the best price. We're here to show you how we fit the criteria."
+	image="assets/images/highlight.png"
+	content='<button class="bordered">Learn more</button>' %}
+
+<!-- B7 -->
+
+{% capture b7_header %}
+	<span class="special">More to love about the {{ site.productName }}</span>
+{% endcapture %}
+
+{% capture b7_subtitle %}
+	With all these indisputable health benefits, economical friendliness, and general superiority, what else could the {{ site.productName }} possible give us? Well...
+{% endcapture %}
+
+{% capture b7_content %}
+	{% include bulletList.html
+		items=page.b7Items %}
+	<!-- C1 (Card 1) -->
+	{% include card.html
+		header="A box like no other"
+		subtitle="Aside from its looks, the Cardbox&trade; offers capabilities beyond a simple box. Read on to find out how."
+		content='<a href="#fakeLinkAgain" class="more">View all features</a>'
+		image="assets/images/c1.png" %}
+	<!-- N1 (Nested 1) -->
+	{% include section.html
+		className="body horizontal right"
+		header="And the best part is"
+		subtitle="It's <i>virtual</i>; no mess, no physical space required. Take it anywhere with you with our <b>Cloud&reg;</b> (sold separately)."
+		image="assets/images/n1.png"
+		content='<button class="download ios">Download iOS</button><button class="download android">Download Android</button>' %}
+{% endcapture %}
+
+{% include section.html
+	className="body vertical wrapper"
+	header=b7_header
+	subtitle=b7_subtitle
+	content=b7_content %}
+	
+<!-- B8 -->
+
+{% capture b8_content %}
+	<div id="customers" class="card bordered">
+		{% for c in site.data.customers %}
+			<div class="customer">
+				<div class="image">
+					<img src="{{ c.image }}" />
+				</div>
+				<div class="review">
+					<span class="text">{{ c.review }}</span>
+					<span class="name">{{ c.name }}</span>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endcapture %}
+
+{% include section.html
+	className="body vertical"
+	header="See what our customers say"
+	subtitle="Check out these satisfied reviews from our satisfied customers."
+	content=b8_content %}
+	
+<!-- B9 -->
+
+{% include section.html
+	className="body vertical final"
+	header="Buy now"
+	subtitle="In just five easy installments of $99.99, you'll get your very own Cardbox&trade; in no time. Satisfaction guaranteed."
+	content='<button class="order">Order now</button>' %}
+	
+<script src="assets/js/carousel.js"></script>
+<script type="text/javascript">
+	$("#customers").carousel();
+</script>

@@ -1,0 +1,21 @@
+<div class="specialList horizontal {{ include.direction }}">
+	<div class="list">
+		{% if include.title %}
+			<h3>{{ include.title }}</h3>
+		{% endif %}
+		<ul>
+			{% for item in include.items %}
+				<li>
+					<span class="header">{{ item.header }}</span>
+					{% if item.subtitle %}
+						<span class="subtitle">{{ item.subtitle }}</span>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+		{{ include.content }}
+	</div>
+	<div class="image">
+		<img src="{{ include.image }}" />
+	</div>
+</div>

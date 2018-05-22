@@ -1,0 +1,19 @@
+<div class="bulletList{% if include.image %} horizontal{% endif %}">
+	<div class="list">
+		<ul>
+			{% for item in include.items %}
+				<li>
+					<span class="header">{{ item.header }}</span>
+					{% if item.subtitle %}
+						<span class="subtitle">{{ item.subtitle }}</span>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	{% if include.image %}
+		<div class="image">
+			<img src="{{ include.image }}" />
+		</div>
+	{% endif %}
+</div>
