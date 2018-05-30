@@ -1,0 +1,106 @@
+// =========================================================== //
+// Links													   //
+// =========================================================== //
+
+a.more {
+	
+	display: block;
+	font-variant: all-small-caps;
+	color: $main-color;
+	text-decoration: none;
+	font-weight: 700;
+	margin-top: 2em;
+	font-size: 1.05em;
+	
+	&::after {
+		content: "\2771";
+		font-weight: 300;
+		display: inline-block;
+		font-size: 0.85em;
+		margin-left: 5px;
+		@include transition(margin-left ease 0.5s);
+	}
+	
+	&:hover::after {
+		margin-left: 10px;
+	}
+	
+}
+
+// =========================================================== //
+// Buttons													   //
+// =========================================================== //
+
+button {
+	margin: 0;
+	margin-right: 10px;
+	padding: 12px 15px;
+	background: white;
+	border: none;
+	color: black;
+	cursor: pointer;
+	@include rounded-edges;
+	@include transition(all ease 0.3s);
+}
+
+button.bordered {
+	
+	background: none;
+	border: 2px solid white;
+	color: white;
+	
+	&:hover {
+		border-color: $main-color;
+		background: $main-color;
+	}
+}
+
+button.download {
+	
+	font-size: 1em;
+	border: 1px solid #d2d2d2;
+	margin-bottom: 10px;
+	
+	&:hover {
+		background: #e6e6e6;
+	}
+	&::before {
+		content: "";
+		background-repeat: no-repeat;
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		margin-right: 5px;
+		vertical-align: middle;
+	}
+	&.android::before {
+		background-image: url('../images/icon_android.png');
+	}
+	&.ios::before {
+		background-image: url('../images/icon_apple.png');
+	}
+	
+}
+
+button.order {
+    font-size: 1.5em;
+    background: #87a742;
+    color: white;
+    font-weight: 500;
+    padding: 15px 25px;
+	
+	&:hover {
+		background: #90e022;
+		font-weight: 700;
+	}
+	
+}
+
+// =========================================================== //
+// Misc														   //
+// =========================================================== //
+
+hr {
+    width: 70%;
+    border: 1px #ddd solid;
+}

@@ -1,6 +1,8 @@
 ---
 ---
 
+@import "vars";
+
 @media all and (max-width: 1725px) {
 	.carousel-arrow {
 		width: 10%;
@@ -11,6 +13,16 @@
 }
 
 @media all and (max-width: 1300px) {
+	.customer:hover {
+		.image {
+			-webkit-filter: none;
+			filter: none;
+			background: none;
+		}
+		img {
+			opacity: 1;
+		}
+	}
 	.customer .review {
 		top: 0;
 		bottom: 0;
@@ -27,25 +39,10 @@
 		-webkit-filter: blur(5px);
 		filter: blur(5px);
 		background: #573a20;
-		-webkit-transition: all ease-in-out 0.5s;
-		-moz-transition: all ease-in-out 0.5s;
-		-o-transition: all ease-in-out 0.5s;
-		transition: all ease-in-out 0.5s;
+		@include transition(all ease-in-out 0.5s);
 	}
 	.customer img {
-		opacity: 0.5;
-		-webkit-transition: opacity ease-in-out 0.5s;
-		-moz-transition: opacity ease-in-out 0.5s;
-		-o-transition: opacity ease-in-out 0.5s;
-		transition: opacity ease-in-out 0.5s;
-	}
-	.customer .image:hover {
-		-webkit-filter: none;
-		filter: none;
-		background: none;
-	}
-	.customer .image:hover img {
-		opacity: 1;
+		@include transition(opacity ease-in-out 0.5s);
 	}
 }
 

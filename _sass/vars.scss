@@ -1,0 +1,49 @@
+$main-color: #60a742;
+$secondary-color: #bc9979;
+
+@mixin rounded-edges {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+}
+
+@mixin transition($values...) {
+	-webkit-transition: $values;
+    -moz-transition: $values;
+    -o-transition: $values;
+    transition: $values;
+}
+
+@mixin transform($values) {
+	-ms-transform: $values;
+	-moz-transform: $values;
+	-webkit-transform: $values;
+	-o-transform: $values;
+	transform: $values;
+}
+
+@mixin animation($values) {
+	-webkit-animation: $values;
+	-moz-animation: $values;
+	-ms-animation: $values;
+	-o-animation: $values;
+	animation: $values;
+}
+
+@-webkit-keyframes rotate {
+	from {
+		@include transform(rotate(0deg));
+	}
+	to {
+		@include transform(rotate(180deg));
+	}
+}
+@keyframes rotate {
+	from {
+		@include transform(rotate(0deg));
+	}
+	to {
+		@include transform(rotate(180deg));
+	}
+}

@@ -1,0 +1,149 @@
+---
+---
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Megrim');
+
+@import "vars";
+@import "layout";
+@import "base";
+@import "sections";
+
+// =========================================================== //
+// Spinning box in the top section							   //
+// =========================================================== //
+
+#box {
+	@include animation(rotate 5s linear infinite);
+	width: 243px;
+	height: 243px;
+	margin: 0 auto;
+
+	div {
+		background: white;
+		display: inline-block;
+		@include transition(all 0.5s ease-out);
+	}
+
+	.center {
+		width: 100px;
+		height: 100px;
+		position: relative;
+		margin-top: 71px;
+	}
+
+	.flap {
+		width: 100px;
+		height: 50px;
+		position: absolute;
+		opacity: 0;
+		
+		&.top {
+			top: -70px;
+			left: 0;
+		}
+		&.bottom {
+			bottom: -70px;
+			left: 0;
+		}
+		&.side {
+			height: 100px;
+			width: 50px;
+		}
+		&.side.left {
+			left: -70px;
+		}
+		&.side.right {
+			right: -70px;
+		}
+		
+	}
+	
+}
+
+section.top:hover #box .flap {
+	opacity: 1;
+
+	&.top {
+		top: -53px;
+	}
+	&.bottom {
+		bottom: -53px;
+	}
+	&.side.left {
+		left: -53px;
+	}
+	&.side.right {
+		right: -53px;
+	}
+	
+}
+
+// =========================================================== //
+// Slides in the carousel									   //
+// =========================================================== //
+
+.customer {
+	position: relative;
+	margin-bottom: 2em;
+	overflow: hidden;
+
+	& > * {
+		border: 1px solid #a5a5a5;
+	}
+	
+	.image {
+		overflow: hidden;
+		width: 500px;
+		height: 500px;
+		float: right;
+	}
+
+	img {
+		height: 100%;
+		width: auto;
+	}
+	
+	.review {
+		padding: 50px;
+		width: 355px;
+		background: white;
+		font-size: 2em;
+		text-align: left;
+		position: absolute;
+		top: 50px;
+		z-index: 1;
+		
+		.text {
+			font-weight: 300;
+			
+			&::before, &::after {
+				font-size: 1.5em;
+				font-weight: 500;
+				line-height: 1rem;
+			}
+			&::before {
+				content: open-quote;
+			}
+			&::after {
+				content: close-quote;
+			}
+			
+		}
+		
+	}
+
+	.name {
+		font-weight: 200;
+		display: block;
+		font-style: italic;
+		text-align: right;
+		margin-top: 1em;
+		
+		&::before {
+			content: "\2014";
+		}
+		
+	}
+	
+}

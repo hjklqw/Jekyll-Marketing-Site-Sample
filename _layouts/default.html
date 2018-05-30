@@ -4,8 +4,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>{{ site.productName }} - {{ page.title }}</title>
-		<link rel="stylesheet" href="/assets/css/main.css">
-		<link rel="stylesheet" href="/assets/css/main-responsive.css">
+		<link rel="stylesheet" href="{{ site.baseurl }}assets/css/main.css">
+		<link rel="stylesheet" href="{{ site.baseurl }}assets/css/main-responsive.css">
+		<link rel="stylesheet" href="{{ site.baseurl }}assets/css/carousel.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	</head>
@@ -13,8 +14,8 @@
 		<header>
 			<h1>{{ site.productName }}</h1>
 			<nav>
-				<a href="/">Home</a>
-				<a href="/about">About</a>
+				<a href="{{ site.baseurl }}">Home</a>
+				<a href="{{ site.baseurl }}about">About</a>
 			</nav>
 		</header>
 		<main>

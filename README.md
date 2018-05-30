@@ -2,11 +2,11 @@
 
 A sample fully responsive site created in Jekyll (HTML5, CSS3, jQuery). Its look and content is based off of the [Help Scout marketing site](https://www.helpscout.net/help-desk-software/).
 
-As this is just a sample, all of the links on the homepage (aside from the ones in the header and footer) are fake.
+As this is just a sample, all of the links and buttons on the homepage (aside from the ones in the header and footer) are fake. Jekyll was learned, content was thought up, and the site was developed all within two days.
 
 ## Installation
 
-No installation is needed; the site can be viewed live at https://hjklqw.github.io/Jekyll-Marketing-Site-Sample/, or simply clone or download the repository and run `index.html`.
+No installation is needed; the site can be viewed live at https://hjklqw.github.io/Jekyll-Marketing-Site-Sample/, or simply clone or download the repository, change `baseurl` in `_config.yml` to `/`, and run `bundle exec jekyll serve`.
 
 ## Photo Credits
 

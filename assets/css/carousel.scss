@@ -1,0 +1,69 @@
+---
+---
+
+@import "vars";
+
+.carousel {
+	position: relative;
+}
+
+.carousel-arrow {
+	height: 500px;
+	width: 20%;
+	position: absolute;
+	font-size: 5rem;
+	text-align: center;
+	display: table;
+	cursor: pointer;
+	@include transition(color 0.35s ease-in-out);
+	
+	
+	&.left {
+		left: 0;
+	}
+	&.right {
+		right: 0;
+	}
+
+	&:hover {
+		color: $main-color;
+	}
+
+	&::after {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	&.left::after {
+		content: "\276E";
+	}
+	&.right::after {
+		content: "\276F";
+	}
+	
+}
+
+.carousel-slides {
+    padding: 0 20%;
+
+	& > div {
+		display: none;
+	}
+	& > div.active {
+		display: block;
+	}
+
+}
+
+.carousel-nav > span {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: $secondary-color;
+	margin: 10px;
+	cursor: pointer;
+	
+	&.animated {
+		@include animation(rotate 1s linear infinite);
+	}
+	
+}
