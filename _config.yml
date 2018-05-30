@@ -23,7 +23,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
 permalink: pretty
-baseurl: /Jekyll-Marketing-Site-Sample
+baseurl: /Jekyll-Marketing-Site-Sample/
 sass:
   style: compressed
 
